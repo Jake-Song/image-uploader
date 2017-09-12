@@ -33,11 +33,13 @@ function image_uploader_callback( $post ) {
 	<div id="metabox_wrapper">
 		<?php
 			$custom_image_data = get_post_meta( $post->ID, 'custom_image_data', true );
-			$test = 0;
+	  if( $custom_image_data !== 0 ) :
 			foreach ($custom_image_data as $key => $image) {
 		?>
 				<img class="selected" src="<?php echo esc_attr($image['url']); ?>">
-		<?php	} ?>
+		<?php	}
+	  endif;
+		?>
 
     <input type="hidden" id="img-hidden-field" name="custom_image_data">
 		<input type="button" id="image-upload-button" class="button" value="Add Image">

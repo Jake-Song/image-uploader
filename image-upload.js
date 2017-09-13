@@ -54,12 +54,12 @@ jQuery( document ).ready( function($){
 
       if ( 'ADD' === action ) {
           addButton.css( 'display', 'none' );
-          deleteButton.css( 'display', '' );
+          deleteButton.css( 'display', 'block' );
           img.css( 'width', '15%' );
       }
 
       if ( 'DELETE' === action ) {
-          addButton.css('display', '');
+          addButton.css('display', 'block');
           deleteButton.css( 'display', 'none' );
           img.css('width', '');
       }

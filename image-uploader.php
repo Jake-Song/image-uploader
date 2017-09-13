@@ -33,7 +33,8 @@ function image_uploader_callback( $post ) {
 	<div id="metabox_wrapper">
 		<?php
 			$custom_image_data = get_post_meta( $post->ID, 'custom_image_data', true );
-	  if( $custom_image_data !== 0 ) :
+			$test = 0;
+	  if( !empty( $custom_image_data ) ) :
 			foreach ($custom_image_data as $key => $image) {
 		?>
 				<img class="selected" src="<?php echo esc_attr($image['url']); ?>">
@@ -42,8 +43,8 @@ function image_uploader_callback( $post ) {
 		?>
 
     <input type="hidden" id="img-hidden-field" name="custom_image_data">
-		<input type="button" id="image-upload-button" class="button" value="Add Image">
-		<input type="button" id="image-delete-button" class="button" value="Delete Image">
+		<input type="button" id="image-upload-button" class="button" value="이미지 추가하기">
+		<input type="button" id="image-delete-button" class="button" value="이미지 삭제하기">
 	</div>
 
 	<?php

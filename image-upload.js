@@ -23,7 +23,7 @@ jQuery( document ).ready( function($){
       var attachmentImgs = customUploader.state().get('selection').toJSON();
       var img = [];
       var hiddenVal = [];
-      for(var i = 0; i < attachmentImgs.length; i++){
+      for(var i = 0; i < 3; i++){
 
         img[i] = $('<img class="selected">');
         img[i].attr( 'src', attachmentImgs[i].url );
@@ -61,7 +61,7 @@ jQuery( document ).ready( function($){
       if ( 'DELETE' === action ) {
           addButton.css('display', 'block');
           deleteButton.css( 'display', 'none' );
-          img.css('width', '');
+          img.remove();
       }
   };
 

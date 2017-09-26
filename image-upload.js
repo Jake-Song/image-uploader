@@ -23,7 +23,7 @@ jQuery( document ).ready( function($){
       var attachmentImgs = customUploader.state().get('selection').toJSON();
       var img = [];
       var hiddenVal = [];
-      for(var i = 0; i < 3; i++){
+      for(var i = 0; i < attachmentImgs.length; i++){
 
         img[i] = $('<img class="selected">');
         img[i].attr( 'src', attachmentImgs[i].url );
